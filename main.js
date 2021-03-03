@@ -120,11 +120,13 @@ const names = 'Alex|Mesuara|Brian|Chanel|Matt|Jeremy B.|Jose|Andy|Dustin|Joshua|
 // Don't print the pipes!
 
 for(let i = 0; i < names.length; i++){
-    if(names[i] === "|"){
-        console.log("Here today is: ")
-    }else{
-        console.log(names[i]);
+
+    let personName = "";
+    while (names[i] !== "|" && i !== names.length){
+        personName += names[i];
+        i++;
     }
+    console.log("Here today is: " + personName);
 }
 
 
